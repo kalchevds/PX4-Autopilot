@@ -1927,7 +1927,7 @@ FixedwingPositionControl::control_auto_landing(const hrt_abstime &now, const flo
 
 			} else {
 				// normal navigation
-				_npfg.navigateWaypoints(prev_wp, curr_wp, curr_pos, ground_speed, _wind_vel);
+				_npfg.navigateWaypoints(prev_wp_local, curr_wp_local, curr_pos_local, ground_speed, _wind_vel);
 			}
 
 			target_airspeed = _npfg.getAirspeedRef() / _eas2tas;
@@ -2102,7 +2102,7 @@ FixedwingPositionControl::control_manual_position(const hrt_abstime &now, const 
 			if (_param_fw_use_npfg.get()) {
 				_npfg.setAirspeedNom(target_airspeed * _eas2tas);
 				_npfg.setAirspeedMax(_param_fw_airspd_max.get() * _eas2tas);
-				_npfg.navigateWaypoints(prev_wp, curr_wp, curr_pos, ground_speed, _wind_vel);
+				_npfg.navigateWaypoints(prev_wp_local, curr_wp_local, curr_pos_local, ground_speed, _wind_vel);
 				_att_sp.roll_body = _npfg.getRollSetpoint();
 				target_airspeed = _npfg.getAirspeedRef() / _eas2tas;
 
