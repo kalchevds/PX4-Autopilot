@@ -13,7 +13,7 @@ CH2: Elevator mixer
 M: 1
 S: 1 1  -10000  -10000      0  -10000  10000
 
-CH3: Motor speed mixer
+CH3: Throttle mixer
 -----------------
 
 M: 1
