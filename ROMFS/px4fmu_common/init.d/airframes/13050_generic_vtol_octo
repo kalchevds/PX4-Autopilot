@@ -15,8 +15,8 @@
 # @output MAIN6 motor 6
 # @output MAIN7 motor 7
 # @output MAIN8 motor 8
-# @output AUX1 Aileron 1
-# @output AUX2 Aileron 2
+# @output AUX1 Aileron
+# @output AUX2 Flaps
 # @output AUX3 Elevator
 # @output AUX4 Rudder
 # @output AUX5 Throttle
